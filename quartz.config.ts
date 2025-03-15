@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: ".NET Interview Preparation",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -56,9 +56,9 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
-      Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"],
-      }),
+      // Plugin.CreatedModifiedDate({
+      //   priority: ["frontmatter", "filesystem"],
+      // }),
       Plugin.SyntaxHighlighting({
         theme: {
           light: "github-light",
@@ -70,7 +70,7 @@ const config: QuartzConfig = {
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
-      Plugin.Description(),
+      // Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [Plugin.RemoveDrafts()],
